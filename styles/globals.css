@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* BRAND */
+  --primary: #546129;
+  --primary-light: #eef2df;
+  --primary-dark: #56632A;
+
+  /* TEXT */
+  --text-primary: #1f1f1f;
+  --text-secondary: #6f7682;
+  --text-muted: #9ca3af;
+
+  /* BACKGROUND */
+  --background: #f6f7f9;
+  --card-bg: #ffffff;
+
+  /* BORDER */
+  --border: #eceef2;
+
+  /* SUCCESS */
+  --success: #16a34a;
+  --success-bg: #dcfce7;
+
+  /* DANGER */
+  --danger: #ef4444;
+  --danger-bg: #fee2e2;
+
+  /* WARNING */
+  --warning: #c27c2c;
+  --warning-bg: #f8ecdf;
+
+  /* INFO */
+  --info: #4f46e5;
+  --info-bg: #e8e7ff;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  color: var(--text-primary);
+  background: var(--background);
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* dark background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a; /* thumb color */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* brighter on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background: #1a1a1a;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a3a #1a1a1a; /* thumb | track */
+}
+
+.custom-select {
+  background: #333333;
+  font-size: 12px;
+  padding: 12px 10px;
+  border-radius: 8px;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F6F7F9] text-[#1F1F1F] antialiased;
+    font-family: var(--font-inter), sans-serif;
+  }
+
+  h1 {
+    @apply
+      text-[48px]
+      leading-[56px]
+      font-extrabold
+      tracking-[-0.03em]
+      text-[#1F1F1F];
+  }
+
+  h2 {
+    @apply
+      text-[40px]
+      leading-[48px]
+      font-bold
+      tracking-[-0.02em]
+      text-[#1F1F1F];
+  }
+
+  h3 {
+    @apply
+      text-[32px]
+      leading-[40px]
+      font-bold
+      tracking-[-0.02em]
+      text-[#1F1F1F];
+  }
+
+  h4 {
+    @apply
+      text-[24px]
+      leading-[32px]
+      font-semibold
+      text-[#1F1F1F];
+  }
+
+  h5 {
+    @apply
+      text-[20px]
+      leading-[28px]
+      font-semibold
+      text-[#1F1F1F];
+  }
+
+  h6 {
+    @apply
+      text-[18px]
+      leading-[26px]
+      font-semibold
+      text-[#1F1F1F];
+  }
+
+  p {
+    @apply
+      text-[15px]
+      leading-[26px]
+      font-normal
+      text-[#6F7682];
+  }
+
+  small {
+    @apply
+      text-[13px]
+      leading-[20px]
+      font-medium
+      text-[#9CA3AF];
+  }
+
+  label {
+    @apply
+      text-[14px]
+      leading-[20px]
+      font-medium
+      text-[#374151];
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply
+      text-[15px]
+      font-medium
+      text-[#1F1F1F];
+  }
+}
+
+
+@layer components {
+  .card {
+    @apply bg-white border rounded-3xl shadow-sm;
+    border-color: var(--border);
+  }
+
+  .section-title {
+    @apply text-2xl font-bold;
+    color: var(--text-primary);
+  }
+
+  .section-subtitle {
+    @apply text-sm;
+    color: var(--text-secondary);
+  }
+
+  .button-primary {
+    @apply
+      h-12
+      px-7
+      rounded-2xl
+      text-white
+      font-semibold
+      inline-flex
+      items-center
+      gap-3
+      transition-all
+      shadow-lg
+      hover:opacity-90;
+    background: var(--primary);
+  }
+
+  .button-secondary {
+    @apply
+      h-12
+      px-7
+      rounded-2xl
+      bg-white
+      border
+      font-semibold
+      inline-flex
+      items-center
+      gap-3
+      transition-all
+      hover:bg-gray-50;
+
+    color: #5f5fa7;
+    border-color: var(--border);
+  }
+
+  .badge-success {
+    @apply
+      px-3
+      py-1
+      rounded-full
+      text-xs
+      font-bold
+      uppercase;
+
+    color: var(--success);
+    background: var(--success-bg);
+  }
+
+  .badge-warning {
+    @apply
+      px-3
+      py-1
+      rounded-full
+      text-xs
+      font-bold;
+
+    color: var(--warning);
+    background: var(--warning-bg);
+  }
+}

@@ -1,0 +1,61 @@
+export const classes = [
+  {
+    id: 1,
+    name: "Karate Grade 1",
+    category: "Martial Arts",
+    instructor: "Mr. Alan Smithee",
+    day: "Monday",
+    time: "10:00 - 11:30 AM",
+    room: "Studio A",
+    students: 8,
+    status: "Active",
+  },
+
+  {
+    id: 2,
+    name: "Karate Grade 2",
+    category: "Martial Arts",
+    instructor: "Ms. Sarah Jane",
+    day: "Tuesday",
+    time: "02:00 - 03:30 PM",
+    room: "Recital Hall",
+    students: 6,
+    status: "Active",
+  },
+
+  {
+    id: 3,
+    name: "Karate Grade 4",
+    category: "Martial Arts",
+    instructor: "David Lee",
+    day: "Wednesday",
+    time: "04:00 - 05:30 PM",
+    room: "Studio 3",
+    students: 12,
+    status: "Active",
+  },
+
+  {
+    id: 4,
+    name: "Karate Grade 4",
+    category: "Martial Arts",
+    instructor: "Master Wong",
+    day: "Monday",
+    time: "06:00 - 07:00 PM",
+    room: "Dojo 1",
+    students: 15,
+    status: "Active",
+  },
+
+  {
+    id: 5,
+    name: "Karate Grade 4",
+    category: "Martial Arts",
+    instructor: "Dr. Emily Stone",
+    day: "Friday",
+    time: "03:00 - 05:00 PM",
+    room: "Room 402",
+    students: 10,
+    status: "Active",
+  },
+];
